@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B93405E0264E9E07007D6EFF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93405DE264E9E07007D6EFF /* CollectionViewCell.swift */; };
+		B93405E1264E9E07007D6EFF /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93405DF264E9E07007D6EFF /* CollectionViewCell.xib */; };
+		B93405E3264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93405E2264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift */; };
+		B93405F8264EE053007D6EFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93405F7264EE053007D6EFF /* DetailViewController.swift */; };
 		EA862DAF264B4B520000B846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA862DAE264B4B520000B846 /* AppDelegate.swift */; };
 		EA862DB1264B4B520000B846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA862DB0264B4B520000B846 /* SceneDelegate.swift */; };
 		EA862DB3264B4B520000B846 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA862DB2264B4B520000B846 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B93405DE264E9E07007D6EFF /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		B93405DF264E9E07007D6EFF /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		B93405E2264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		B93405F7264EE053007D6EFF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EA862DAB264B4B520000B846 /* denemeGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = denemeGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA862DAE264B4B520000B846 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA862DB0264B4B520000B846 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B93405E4264ED409007D6EFF /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				EA862DB2264B4B520000B846 /* ViewController.swift */,
+				B93405DE264E9E07007D6EFF /* CollectionViewCell.swift */,
+				B93405DF264E9E07007D6EFF /* CollectionViewCell.xib */,
+				B93405E2264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		B93405FA264EE3B4007D6EFF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA862DB7264B4B550000B846 /* Assets.xcassets */,
+				EA862DB9264B4B550000B846 /* LaunchScreen.storyboard */,
+				EA862DAE264B4B520000B846 /* AppDelegate.swift */,
+				EA862DB0264B4B520000B846 /* SceneDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B93405FB264EE3C9007D6EFF /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				B93405F7264EE053007D6EFF /* DetailViewController.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		EA862DA2264B4B520000B846 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +94,10 @@
 		EA862DAD264B4B520000B846 /* denemeGit */ = {
 			isa = PBXGroup;
 			children = (
-				EA862DAE264B4B520000B846 /* AppDelegate.swift */,
-				EA862DB0264B4B520000B846 /* SceneDelegate.swift */,
-				EA862DB2264B4B520000B846 /* ViewController.swift */,
 				EA862DB4264B4B520000B846 /* Main.storyboard */,
-				EA862DB7264B4B550000B846 /* Assets.xcassets */,
-				EA862DB9264B4B550000B846 /* LaunchScreen.storyboard */,
+				B93405FA264EE3B4007D6EFF /* Helpers */,
+				B93405FB264EE3C9007D6EFF /* DetailView */,
+				B93405E4264ED409007D6EFF /* Card */,
 				EA862DBC264B4B550000B846 /* Info.plist */,
 			);
 			path = denemeGit;
@@ -126,6 +162,7 @@
 			files = (
 				EA862DBB264B4B550000B846 /* LaunchScreen.storyboard in Resources */,
 				EA862DB8264B4B550000B846 /* Assets.xcassets in Resources */,
+				B93405E1264E9E07007D6EFF /* CollectionViewCell.xib in Resources */,
 				EA862DB6264B4B520000B846 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +176,10 @@
 			files = (
 				EA862DB3264B4B520000B846 /* ViewController.swift in Sources */,
 				EA862DAF264B4B520000B846 /* AppDelegate.swift in Sources */,
+				B93405E3264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift in Sources */,
+				B93405E0264E9E07007D6EFF /* CollectionViewCell.swift in Sources */,
 				EA862DB1264B4B520000B846 /* SceneDelegate.swift in Sources */,
+				B93405F8264EE053007D6EFF /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
