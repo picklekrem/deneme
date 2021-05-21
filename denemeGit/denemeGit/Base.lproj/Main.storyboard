@@ -41,25 +41,62 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fNw-Ew-KnX"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOv-FB-Dp5">
+                                <rect key="frame" x="303" y="89.5" width="290" height="214"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yyyy" translatesAutoresizingMaskIntoConstraints="NO" id="fC9-04-1Mu">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="214"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="fC9-04-1Mu" firstAttribute="top" secondItem="nOv-FB-Dp5" secondAttribute="top" id="5Se-B3-Ve4"/>
+                                    <constraint firstItem="fC9-04-1Mu" firstAttribute="leading" secondItem="nOv-FB-Dp5" secondAttribute="leading" id="Skw-S4-siw"/>
+                                    <constraint firstAttribute="trailing" secondItem="fC9-04-1Mu" secondAttribute="trailing" id="fcr-5C-BMY"/>
+                                    <constraint firstAttribute="bottom" secondItem="fC9-04-1Mu" secondAttribute="bottom" id="mZm-Nt-OF6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HTu-ei-VY2" secondAttribute="trailing" id="0pC-6z-HcE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HTu-ei-VY2" secondAttribute="bottom" id="aoW-pQ-9Kz"/>
-                            <constraint firstItem="HTu-ei-VY2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rRT-Qg-7qE"/>
-                            <constraint firstItem="HTu-ei-VY2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yR2-kZ-HHl"/>
+                            <constraint firstItem="HTu-ei-VY2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7hK-TO-Uvz"/>
+                            <constraint firstItem="nOv-FB-Dp5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.323661" id="Fex-Aa-BIB"/>
+                            <constraint firstItem="nOv-FB-Dp5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="T0A-P4-I5B"/>
+                            <constraint firstItem="nOv-FB-Dp5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vjt-Od-q9e"/>
+                            <constraint firstItem="nOv-FB-Dp5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.516908" id="jAC-Hd-XWX"/>
+                            <constraint firstItem="HTu-ei-VY2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tNn-27-Ahg"/>
+                            <constraint firstItem="HTu-ei-VY2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uQN-e2-UsC"/>
+                            <constraint firstAttribute="bottom" secondItem="HTu-ei-VY2" secondAttribute="bottom" constant="21" id="uW4-ey-1Fr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p48-bU-wHC"/>
                     <connections>
+                        <outlet property="backView" destination="nOv-FB-Dp5" id="qtt-B2-SJN"/>
                         <outlet property="collectionView" destination="HTu-ei-VY2" id="orr-LY-z2x"/>
-                        <segue destination="kYS-Sm-B7o" kind="presentation" identifier="toDetailsVC" modalTransitionStyle="crossDissolve" id="4qK-kZ-LQH"/>
+                        <outlet property="imageView" destination="fC9-04-1Mu" id="iZz-Jo-YZV"/>
+                        <segue destination="kYS-Sm-B7o" kind="presentation" identifier="toDetailsVC" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="yUo-EZ-bS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.19642857142856" y="73.913043478260875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j2q-dw-t3W">
+            <objects>
+                <viewController id="MN1-LS-7Rf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DOV-dh-bdX">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C7w-Mc-IaG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n2j-gg-RaY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDU-Sf-cvK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="1042"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Wi1-k0-38D">
@@ -70,27 +107,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40m-cv-5fb">
-                                <rect key="frame" x="94" y="50" width="708" height="293"/>
+                                <rect key="frame" x="258" y="195" width="380" height="155"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="backButton:" destination="kYS-Sm-B7o" eventType="touchUpInside" id="eEI-14-cQH"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f7G-9b-1vD">
+                                <rect key="frame" x="328" y="35" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Saa-oR-UOL"/>
+                                    <constraint firstAttribute="height" constant="128" id="wyZ-I4-OPa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="spn-Td-eCB"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="40m-cv-5fb" firstAttribute="top" secondItem="spn-Td-eCB" secondAttribute="top" constant="50" id="8Y7-2y-2Zh"/>
-                            <constraint firstItem="40m-cv-5fb" firstAttribute="leading" secondItem="spn-Td-eCB" secondAttribute="leading" constant="50" id="APG-Cg-b6b"/>
-                            <constraint firstItem="spn-Td-eCB" firstAttribute="bottom" secondItem="40m-cv-5fb" secondAttribute="bottom" constant="50" id="XWL-fM-1Bc"/>
-                            <constraint firstItem="spn-Td-eCB" firstAttribute="trailing" secondItem="40m-cv-5fb" secondAttribute="trailing" constant="50" id="orP-CV-cOc"/>
+                            <constraint firstItem="f7G-9b-1vD" firstAttribute="leading" secondItem="spn-Td-eCB" secondAttribute="leading" constant="284" id="1uq-wh-xDa"/>
+                            <constraint firstItem="40m-cv-5fb" firstAttribute="top" secondItem="spn-Td-eCB" secondAttribute="top" constant="195" id="8Y7-2y-2Zh"/>
+                            <constraint firstItem="40m-cv-5fb" firstAttribute="leading" secondItem="spn-Td-eCB" secondAttribute="leading" constant="214" id="APG-Cg-b6b"/>
+                            <constraint firstItem="spn-Td-eCB" firstAttribute="trailing" secondItem="f7G-9b-1vD" secondAttribute="trailing" constant="284" id="At5-ml-vwD"/>
+                            <constraint firstItem="40m-cv-5fb" firstAttribute="top" secondItem="f7G-9b-1vD" secondAttribute="bottom" constant="32" id="PvW-GR-eOE"/>
+                            <constraint firstItem="spn-Td-eCB" firstAttribute="bottom" secondItem="40m-cv-5fb" secondAttribute="bottom" constant="43" id="XWL-fM-1Bc"/>
+                            <constraint firstItem="f7G-9b-1vD" firstAttribute="top" secondItem="spn-Td-eCB" secondAttribute="top" constant="35" id="k7x-3P-Fwe"/>
+                            <constraint firstItem="spn-Td-eCB" firstAttribute="trailing" secondItem="40m-cv-5fb" secondAttribute="trailing" constant="214" id="orP-CV-cOc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aJo-vV-WL9"/>
+                    <connections>
+                        <outlet property="imageView" destination="f7G-9b-1vD" id="KT1-ok-EbG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h61-f2-NAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="74"/>
+            <point key="canvasLocation" x="1652.6785714285713" y="73.913043478260875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qGQ-Wa-gD2">
@@ -111,6 +163,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="yyyy" width="800" height="468"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

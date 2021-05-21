@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -16,11 +17,15 @@ class DetailViewController: UIViewController {
     func loadHomeScreen() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainTabBarController = storyBoard.instantiateViewController(identifier: "mainTabBarVC_ID")
-        mainTabBarController.modalPresentationStyle = .popover
+        mainTabBarController.modalPresentationStyle = .fullScreen
         self.present(mainTabBarController, animated: true, completion: nil)
     }
 
     @IBAction func backButton(_ sender: Any) {
         loadHomeScreen()
+        //dismiss(animated: true, completion: nil)
     }
 }
+
+
+

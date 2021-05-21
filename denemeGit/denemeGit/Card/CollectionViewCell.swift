@@ -8,6 +8,10 @@
 import UIKit
 import Foundation
 
+protocol ViewScaleable {
+    var scaleView: UIView { get }
+}
+
 class CollectionViewCell: UICollectionViewCell {
     
     static let identifier = "CollectionViewCell"
@@ -19,6 +23,12 @@ class CollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+}
+
+extension CollectionViewCell: ViewScaleable {
+    var scaleView: UIView {
+        return backView
     }
 }
 
