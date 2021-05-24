@@ -28,15 +28,22 @@ class ExitButtonViewController: UIViewController {
     @objc func didTapImageView(_ sender: UITapGestureRecognizer) {
         if touch {
             UIView.animate(withDuration: 1) { [self] in
-                one.transform = CGAffineTransform(translationX: -100, y: -100)
-                two.transform = CGAffineTransform(translationX: -100, y: 100)
-                three.transform = CGAffineTransform(translationX: 100, y: 100)
-                four.transform = CGAffineTransform(translationX: 100, y: -100)
+                print("geri geliyorum.")
+                one.transform = CGAffineTransform(translationX: -25, y: -10)
+                two.transform = CGAffineTransform(translationX: -25, y: 25)
+                three.transform = CGAffineTransform(translationX: 10, y: 25)
+                four.transform = CGAffineTransform(translationX: 10, y: -10)
                 touch = false
             }
         } else {
-            one.transform = CGAffineTransform(translationX: 60, y: 37)
-            touch = true
+            UIView.animate(withDuration: 1) { [self] in
+                print("kayboluyorum")
+                one.transform = CGAffineTransform(translationX: -200, y: -200)
+                two.transform = CGAffineTransform(translationX: -200 , y: 200)
+                three.transform = CGAffineTransform(translationX: 200, y: 200)
+                four.transform = CGAffineTransform(translationX: 200, y: -200)
+                touch = true
+            }
         }
       
     }

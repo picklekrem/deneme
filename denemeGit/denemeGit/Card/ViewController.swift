@@ -13,17 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet var firstView: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var secondView: UIView!
-    
+    var timer : Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
         collectionView.collectionViewLayout = CardsCollectionFlowLayout()
         firstView.isHidden = true
         secondView.isHidden = true
+        
     }
     
     func test() {
-        UIView.animate(withDuration: 2, animations: {
             self.firstView.isHidden = false
             var transform = CATransform3DIdentity
             transform.m34 = -0.002
@@ -35,19 +35,36 @@ class ViewController: UIViewController {
             CATransaction.begin()
             self.firstView.layer.add(animation, forKey: "transform")
             self.firstView.layer.transform = CATransform3DRotate(transform, CGFloat(90 * Double.pi / 180.0), 0, -1, 0)
+        test2()
+    }
+    func test2 () {
+        
+        UIView.animate(withDuration: 1, delay: 2, animations: { [self] in
+            secondView.isHidden = false
             
-        }) { (completed) in
-            UIView.animate(withDuration: 2, delay: 0, options: [], animations: { [self] in
-                secondView.isHidden = false
-                secondView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
-                secondView.transform.a = 3.1
-                secondView.transform.d = 2.05
-            }) { _ in
-                self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
-            }
-        }
+            secondView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+            secondView.transform.a = 3.1
+            secondView.transform.d = 2.05
+            //performSegue(withIdentifier: "toDetailsVC", sender: nil)
+            timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector:#selector(performingSegue),userInfo: nil, repeats: false)
+        })
+    }
+    @objc func performingSegue() {
+        self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
     
+    /*
+     { (completed) in
+         UIView.animate(withDuration: 2, delay: 0, options: [], animations: { [self] in
+             
+             secondView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+             secondView.transform.a = 3.1
+             secondView.transform.d = 2.05
+         }) { _ in
+             self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
+         }
+     }
+     */
     func trustAnimate() {
         UIView.animate(withDuration: 2, animations: {
             let height = self.collectionView.frame.height / 1000
