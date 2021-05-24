@@ -30,8 +30,6 @@ class ScalePresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         var fromViewController = transitionContext.viewController(forKey: .from)
         let fromView = transitionContext.view(forKey: .from)
         
-        let containerView = transitionContext.containerView
-        
         let toViewController = transitionContext.viewController(forKey: .to)!
         let toView = transitionContext.view(forKey: .to)
         
@@ -39,7 +37,7 @@ class ScalePresentAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             transitionContext.containerView.addSubview(toView)
         }
         
-        var startFrame = CGRect.zero
+        var startFrame = CGRect(x: (toView?.frame.maxX)!, y: ((toView?.frame.maxY)! / 2), width: 0, height: 0)
         if let fromViewController = fromViewController as? ViewScaleable {
             startFrame = fromViewController.scaleView.frame
         } else {

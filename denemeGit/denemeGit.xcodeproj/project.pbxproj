@@ -11,6 +11,7 @@
 		B93405E1264E9E07007D6EFF /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93405DF264E9E07007D6EFF /* CollectionViewCell.xib */; };
 		B93405E3264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93405E2264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift */; };
 		B93405F8264EE053007D6EFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93405F7264EE053007D6EFF /* DetailViewController.swift */; };
+		B9B179DF2659515B0038AE9B /* ExitButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B179DE2659515B0038AE9B /* ExitButtonViewController.swift */; };
 		B9CCB6E926530B5300287DA2 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CCB6E826530B5300287DA2 /* ScaleSegue.swift */; };
 		EA862DAF264B4B520000B846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA862DAE264B4B520000B846 /* AppDelegate.swift */; };
 		EA862DB1264B4B520000B846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA862DB0264B4B520000B846 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 		B93405DF264E9E07007D6EFF /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		B93405E2264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionFlowLayout.swift; sourceTree = "<group>"; };
 		B93405F7264EE053007D6EFF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B9B179DE2659515B0038AE9B /* ExitButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonViewController.swift; sourceTree = "<group>"; };
 		B9CCB6E826530B5300287DA2 /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		EA862DAB264B4B520000B846 /* denemeGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = denemeGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA862DAE264B4B520000B846 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				B93405E4264ED409007D6EFF /* Card */,
 				EA862DBC264B4B550000B846 /* Info.plist */,
 				B9CCB6E826530B5300287DA2 /* ScaleSegue.swift */,
+				B9B179DE2659515B0038AE9B /* ExitButtonViewController.swift */,
 			);
 			path = denemeGit;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				B93405E3264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift in Sources */,
 				B93405E0264E9E07007D6EFF /* CollectionViewCell.swift in Sources */,
 				EA862DB1264B4B520000B846 /* SceneDelegate.swift in Sources */,
+				B9B179DF2659515B0038AE9B /* ExitButtonViewController.swift in Sources */,
 				B93405F8264EE053007D6EFF /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

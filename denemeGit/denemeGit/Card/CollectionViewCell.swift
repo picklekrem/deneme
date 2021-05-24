@@ -19,8 +19,8 @@ class CollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "CollectionViewCell", bundle: nil)
     }
     
-    @IBOutlet var backView: UIView!
-
+    @IBOutlet var backCellView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -28,7 +28,7 @@ class CollectionViewCell: UICollectionViewCell {
 
 extension CollectionViewCell: ViewScaleable {
     var scaleView: UIView {
-        return backView
+        return backCellView
     }
 }
 
