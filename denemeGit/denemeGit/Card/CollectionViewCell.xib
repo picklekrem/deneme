@@ -19,7 +19,18 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3R-QI-ptu">
                         <rect key="frame" x="0.0" y="0.0" width="263" height="139"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yyyy" translatesAutoresizingMaskIntoConstraints="NO" id="muR-wU-Gx0">
+                                <rect key="frame" x="0.0" y="0.0" width="263" height="139"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="muR-wU-Gx0" firstAttribute="top" secondItem="U3R-QI-ptu" secondAttribute="top" id="1kr-it-0ze"/>
+                            <constraint firstItem="muR-wU-Gx0" firstAttribute="leading" secondItem="U3R-QI-ptu" secondAttribute="leading" id="Zci-eQ-C2B"/>
+                            <constraint firstAttribute="trailing" secondItem="muR-wU-Gx0" secondAttribute="trailing" id="hV6-mQ-ka1"/>
+                            <constraint firstAttribute="bottom" secondItem="muR-wU-Gx0" secondAttribute="bottom" id="znm-Ms-gbs"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -32,12 +43,13 @@
             </constraints>
             <size key="customSize" width="263" height="139"/>
             <connections>
-                <outlet property="backView" destination="U3R-QI-ptu" id="Par-7T-fPl"/>
+                <outlet property="backCellView" destination="U3R-QI-ptu" id="Par-7T-fPl"/>
             </connections>
             <point key="canvasLocation" x="286.23188405797106" y="149.66517857142856"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="yyyy" width="800" height="468"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
