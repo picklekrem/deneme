@@ -38,7 +38,6 @@ class ViewController: UIViewController {
         test2()
     }
     func test2 () {
-        
         UIView.animate(withDuration: 1, delay: 2, animations: { [self] in
             secondView.isHidden = false
             
