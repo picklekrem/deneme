@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var firstView: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var secondView: UIView!
+    var timer : Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
@@ -23,17 +24,19 @@ class ViewController: UIViewController {
     }
     
     func test() {
-            self.firstView.isHidden = false
-            var transform = CATransform3DIdentity
-            transform.m34 = -0.002
-            let animation = CABasicAnimation(keyPath: "transform")
-            animation.fromValue = CATransform3DRotate(transform, 0, 0, 1, 0)
-            animation.toValue = CATransform3DRotate(transform, CGFloat(90 * Double.pi / 180.0), 0, -1, 0)
-            animation.duration = 2
-            self.firstView.setAnchorPoint(CGPoint(x: 0, y: 0.5))
-            CATransaction.begin()
-            self.firstView.layer.add(animation, forKey: "transform")
-            self.firstView.layer.transform = CATransform3DRotate(transform, CGFloat(90 * Double.pi / 180.0), 0, -1, 0)
+        //scroll position
+        
+        self.firstView.isHidden = false
+        var transform = CATransform3DIdentity
+        transform.m34 = -0.002
+        let animation = CABasicAnimation(keyPath: "transform")
+        animation.fromValue = CATransform3DRotate(transform, 0, 0, 1, 0)
+        animation.toValue = CATransform3DRotate(transform, CGFloat(90 * Double.pi / 180.0), 0, -1, 0)
+        animation.duration = 2
+        self.firstView.setAnchorPoint(CGPoint(x: 0, y: 0.5))
+        CATransaction.begin()
+        self.firstView.layer.add(animation, forKey: "transform")
+        self.firstView.layer.transform = CATransform3DRotate(transform, CGFloat(90 * Double.pi / 180.0), 0, -1, 0)
         
         UIView.animate(withDuration: 1, delay: 2, animations: { [self] in
             secondView.isHidden = false
@@ -41,16 +44,16 @@ class ViewController: UIViewController {
             secondView.transform.a = 3.1
             secondView.transform.d = 2.05
         }) {_ in
-                self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
+            self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
         }
     }
     
     func trustAnimate() {
         UIView.animate(withDuration: 2, animations: {
-            let height = self.collectionView.frame.height
-            let width = self.collectionView.frame.width
+            let height = self.collectionView.bounds.height
+            let width = self.collectionView.bounds.width
             
-            self.view.transform = CGAffineTransform.identity.scaledBy(x: width, y: height)
+            self.view.transform = CGAffineTransform.identity.scaledBy(x: 2.75, y: 4)
             
         }, completion: { _ in
             //            UIView.animate(withDuration: 2, animations: {
@@ -101,6 +104,53 @@ class ViewController: UIViewController {
             self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
         })
     }
+    
+    
+    func deneme() {
+        //scroll position
+        
+        //                self.firstView.isHidden = false
+        //                var transform = CATransform3DIdentity
+        //                transform.m34 = -0.002
+        //                let animation = CABasicAnimation(keyPath: "transform")
+        //                animation.fromValue = CATransform3DRotate(transform, 0, 0, 1, 0)
+        //                animation.toValue = CATransform3DRotate(transform, CGFloat(90 * Double.pi / 180.0), 0, -1, 0)
+        //                animation.duration = 2
+        //                self.firstView.setAnchorPoint(CGPoint(x: 0, y: 0.5))
+        //                CATransaction.begin()
+        //                self.firstView.layer.add(animation, forKey: "transform")
+        //                self.firstView.layer.transform = CATransform3DRotate(transform, CGFloat(90 * Double.pi / 180.0), 0, -1, 0)
+        
+        UIView.animate(withDuration: 1, animations: { [self] in
+            firstView.isHidden = false
+            firstView.backgroundColor = .clear
+            imageView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+//            imageView.transform.a = 3.1
+//            imageView.transform.d = 2.05
+        }) { [self]_ in
+                            
+            var transform = CATransform3DIdentity
+            transform.m34 = -0.0005
+            let animation = CABasicAnimation(keyPath: "transform")
+            animation.fromValue = CATransform3DRotate(transform, 0, 0, 1, 0)
+            animation.toValue = CATransform3DRotate(transform, CGFloat(180 * Double.pi / 180.0), 0, -1, 0)
+            animation.duration = 4
+            self.firstView.setAnchorPoint(CGPoint(x: 0, y: 0.5))
+            CATransaction.begin()
+            self.firstView.layer.add(animation, forKey: "transform")
+            
+            self.firstView.layer.transform = CATransform3DRotate(transform, CGFloat(90 * Double.pi / 180.0), 0, 1, 0)
+            self.secondView.isHidden = false
+            
+            timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector:#selector(segueing),userInfo: nil, repeats: false)
+        }
+        
+    }
+    
+    @objc func segueing() {
+        self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
+        
+    }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -116,9 +166,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
-//        trustAnimate()
-//        lastUpdate()
-        test()
+        //        trustAnimate()
+        //        lastUpdate()
+        //        test()
+        deneme()
     }
 }
 
