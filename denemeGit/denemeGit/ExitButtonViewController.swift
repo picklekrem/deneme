@@ -16,7 +16,8 @@ class ExitButtonViewController: UIViewController {
     @IBOutlet var three: UIButton!
     @IBOutlet var four: UIButton!
     
-    var touch = false
+    var touch = true
+    var timer : Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,29 @@ class ExitButtonViewController: UIViewController {
         backView.isUserInteractionEnabled = true
         backView.addGestureRecognizer(tapGestureRecognizer)
         print(one.frame.minX)
-    }
         
+        
+        one.transform = CGAffineTransform(translationX: -200, y: -200)
+        two.transform = CGAffineTransform(translationX: -200 , y: 200)
+        three.transform = CGAffineTransform(translationX: 200, y: 200)
+        four.transform = CGAffineTransform(translationX: 200, y: -200)
+        touch = true
+        
+        timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector:#selector(segueing),userInfo: nil, repeats: false)
+    }
+    
+    @objc func segueing() {
+        UIView.animate(withDuration: 1) { [self] in
+            print("geri geliyorum.")
+            one.transform = CGAffineTransform(translationX: 0, y: 0)
+            print(one.frame.minX)
+            two.transform = CGAffineTransform(translationX: 0, y: 0)
+            three.transform = CGAffineTransform(translationX: 0, y: 0)
+            four.transform = CGAffineTransform(translationX: 0, y: 0)
+            touch = false
+        }
+    }
+    
     @objc func didTapImageView(_ sender: UITapGestureRecognizer) {
         if touch {
             UIView.animate(withDuration: 1) { [self] in
@@ -47,6 +69,6 @@ class ExitButtonViewController: UIViewController {
                 touch = true
             }
         }
-      
+        
     }
 }
