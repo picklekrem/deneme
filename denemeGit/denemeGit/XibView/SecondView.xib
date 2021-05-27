@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SecondView" customModule="denemeGit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="TEQ-Lq-EnO">
+                    <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TEQ-Lq-EnO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0nB-tb-GKr"/>
+                <constraint firstAttribute="bottom" secondItem="TEQ-Lq-EnO" secondAttribute="bottom" id="E4x-ql-jsN"/>
+                <constraint firstItem="TEQ-Lq-EnO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FD9-Y2-7Xs"/>
+                <constraint firstAttribute="trailing" secondItem="TEQ-Lq-EnO" secondAttribute="trailing" id="rBd-0H-Ocn"/>
+            </constraints>
+            <connections>
+                <outlet property="secondImage" destination="TEQ-Lq-EnO" id="EbS-oO-tTq"/>
+            </connections>
+            <point key="canvasLocation" x="44.866071428571423" y="89.855072463768124"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="welcome" width="1920" height="1280"/>
+    </resources>
+</document>

@@ -11,41 +11,41 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="denemeGit" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="263" height="139"/>
+            <rect key="frame" x="0.0" y="0.0" width="338" height="232"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="263" height="139"/>
+                <rect key="frame" x="0.0" y="0.0" width="338" height="232"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3R-QI-ptu">
-                        <rect key="frame" x="0.0" y="0.0" width="263" height="139"/>
+                        <rect key="frame" x="0.0" y="0.0" width="338" height="232"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yyyy" translatesAutoresizingMaskIntoConstraints="NO" id="muR-wU-Gx0">
-                                <rect key="frame" x="0.0" y="0.0" width="263" height="139"/>
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="232"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="muR-wU-Gx0" firstAttribute="top" secondItem="U3R-QI-ptu" secondAttribute="top" id="1kr-it-0ze"/>
-                            <constraint firstItem="muR-wU-Gx0" firstAttribute="leading" secondItem="U3R-QI-ptu" secondAttribute="leading" id="Zci-eQ-C2B"/>
-                            <constraint firstAttribute="trailing" secondItem="muR-wU-Gx0" secondAttribute="trailing" id="hV6-mQ-ka1"/>
-                            <constraint firstAttribute="bottom" secondItem="muR-wU-Gx0" secondAttribute="bottom" id="znm-Ms-gbs"/>
+                            <constraint firstItem="muR-wU-Gx0" firstAttribute="top" secondItem="U3R-QI-ptu" secondAttribute="top" id="2sD-HL-OH2"/>
+                            <constraint firstItem="muR-wU-Gx0" firstAttribute="leading" secondItem="U3R-QI-ptu" secondAttribute="leading" id="Bj7-xL-GZQ"/>
+                            <constraint firstAttribute="trailing" secondItem="muR-wU-Gx0" secondAttribute="trailing" id="Ebj-IG-ZI2"/>
+                            <constraint firstAttribute="bottom" secondItem="muR-wU-Gx0" secondAttribute="bottom" id="qjx-XS-LJY"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="U3R-QI-ptu" secondAttribute="trailing" id="hUt-N5-oGd"/>
-                <constraint firstItem="U3R-QI-ptu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="t1R-md-q9g"/>
-                <constraint firstItem="U3R-QI-ptu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="whN-gY-KF7"/>
-                <constraint firstAttribute="bottom" secondItem="U3R-QI-ptu" secondAttribute="bottom" id="yuw-vo-q7o"/>
+                <constraint firstItem="U3R-QI-ptu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JW1-fk-xvE"/>
+                <constraint firstItem="U3R-QI-ptu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="snN-tI-uXU"/>
+                <constraint firstAttribute="bottom" secondItem="U3R-QI-ptu" secondAttribute="bottom" id="v9O-BQ-BKa"/>
+                <constraint firstAttribute="trailing" secondItem="U3R-QI-ptu" secondAttribute="trailing" id="voA-K2-NQV"/>
             </constraints>
-            <size key="customSize" width="263" height="139"/>
+            <size key="customSize" width="338" height="232"/>
             <connections>
                 <outlet property="backCellView" destination="U3R-QI-ptu" id="Par-7T-fPl"/>
             </connections>
-            <point key="canvasLocation" x="286.23188405797106" y="149.66517857142856"/>
+            <point key="canvasLocation" x="353.62318840579712" y="184.82142857142856"/>
         </collectionViewCell>
     </objects>
     <resources>

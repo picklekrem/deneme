@@ -19,6 +19,7 @@ class CollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "CollectionViewCell", bundle: nil)
     }
     
+    @IBOutlet var alphaTestView: UIView!
     @IBOutlet var backCellView: UIView!
     
     override func awakeFromNib() {
