@@ -21,9 +21,24 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var alphaTestView: UIView!
     @IBOutlet var backCellView: UIView!
+    @IBOutlet var cellImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backCellView.layer.cornerRadius = 16
+        cellImageView.layer.cornerRadius = 16
+    }
+    
+    func transformToLarge() {
+        UIView.animate(withDuration: 0.2) {
+            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.6)
+        }
+    }
+    
+    func transformToStandard() {
+        UIView.animate(withDuration: 0.2) {
+            self.transform = CGAffineTransform.identity
+        }
     }
 }
 

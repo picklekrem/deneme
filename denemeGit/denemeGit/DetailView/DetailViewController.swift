@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainTabBarController = storyBoard.instantiateViewController(identifier: "mainTabBarVC_ID")
         mainTabBarController.modalPresentationStyle = .fullScreen
+        mainTabBarController.modalTransitionStyle = .crossDissolve
         self.present(mainTabBarController, animated: true, completion: nil)
     }
 

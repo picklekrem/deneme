@@ -8,5 +8,11 @@
 import UIKit
 
 class FirstView: UIView {
+    
     @IBOutlet var firstImage: UIImageView!
+    
+    override func awakeFromNib() {
+        firstImage.layer.cornerRadius = 16
+    }
+    
 }

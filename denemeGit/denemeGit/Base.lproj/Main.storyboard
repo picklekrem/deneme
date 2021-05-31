@@ -42,14 +42,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="fNw-Ew-KnX"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJy-QI-JRh" customClass="XibView" customModule="denemeGit" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJy-QI-JRh" customClass="XibView" customModule="denemeGit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="FirstView"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-kD-BCm" customClass="XibView" customModule="denemeGit" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-kD-BCm" customClass="XibView" customModule="denemeGit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -78,6 +78,7 @@
                     <connections>
                         <outlet property="collectionView" destination="HTu-ei-VY2" id="orr-LY-z2x"/>
                         <outlet property="firstPopUp" destination="IJy-QI-JRh" id="ZZ8-kR-PAo"/>
+                        <outlet property="indicatorView" destination="8bC-Xf-vdC" id="riN-qZ-FdJ"/>
                         <outlet property="secondPopUp" destination="uNr-kD-BCm" id="Op2-8N-FEG"/>
                         <segue destination="kYS-Sm-B7o" kind="presentation" identifier="toDetailsVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="yUo-EZ-bS9"/>
                     </connections>
@@ -198,13 +199,13 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="f7G-9b-1vD" firstAttribute="leading" secondItem="HHa-KY-9qq" secondAttribute="leading" id="DVw-dO-lRA"/>
                             <constraint firstItem="40m-cv-5fb" firstAttribute="leading" secondItem="HHa-KY-9qq" secondAttribute="leadingMargin" id="FkE-eP-uMb"/>
-                            <constraint firstItem="f7G-9b-1vD" firstAttribute="top" secondItem="G6c-t3-mb4" secondAttribute="top" id="IKW-To-A1Q"/>
-                            <constraint firstItem="G6c-t3-mb4" firstAttribute="trailing" secondItem="f7G-9b-1vD" secondAttribute="trailing" constant="-44" id="Jq6-A0-1iW"/>
+                            <constraint firstAttribute="bottom" secondItem="f7G-9b-1vD" secondAttribute="bottom" id="Jmv-PT-N8k"/>
+                            <constraint firstAttribute="trailing" secondItem="f7G-9b-1vD" secondAttribute="trailing" id="NQW-Ta-14B"/>
                             <constraint firstItem="40m-cv-5fb" firstAttribute="top" secondItem="G6c-t3-mb4" secondAttribute="top" id="TIK-eE-F4L"/>
                             <constraint firstAttribute="trailingMargin" secondItem="40m-cv-5fb" secondAttribute="trailing" id="gl0-Zr-bnR"/>
-                            <constraint firstItem="f7G-9b-1vD" firstAttribute="leading" secondItem="G6c-t3-mb4" secondAttribute="leading" constant="-44" id="oan-Jq-yia"/>
-                            <constraint firstAttribute="bottom" secondItem="f7G-9b-1vD" secondAttribute="bottom" id="vz3-Yo-rPm"/>
+                            <constraint firstItem="f7G-9b-1vD" firstAttribute="top" secondItem="G6c-t3-mb4" secondAttribute="top" id="lyj-WT-B0Y"/>
                             <constraint firstItem="G6c-t3-mb4" firstAttribute="bottom" secondItem="40m-cv-5fb" secondAttribute="bottom" id="xzG-nh-ugC"/>
                         </constraints>
                     </view>

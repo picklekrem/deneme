@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3R-QI-ptu">
-                        <rect key="frame" x="0.0" y="0.0" width="338" height="232"/>
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="230"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yyyy" translatesAutoresizingMaskIntoConstraints="NO" id="muR-wU-Gx0">
-                                <rect key="frame" x="0.0" y="0.0" width="338" height="232"/>
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="230"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -34,16 +33,16 @@
                     </view>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="U3R-QI-ptu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JW1-fk-xvE"/>
                 <constraint firstItem="U3R-QI-ptu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="snN-tI-uXU"/>
-                <constraint firstAttribute="bottom" secondItem="U3R-QI-ptu" secondAttribute="bottom" id="v9O-BQ-BKa"/>
-                <constraint firstAttribute="trailing" secondItem="U3R-QI-ptu" secondAttribute="trailing" id="voA-K2-NQV"/>
+                <constraint firstAttribute="bottom" secondItem="U3R-QI-ptu" secondAttribute="bottom" constant="2" id="v9O-BQ-BKa"/>
+                <constraint firstAttribute="trailing" secondItem="U3R-QI-ptu" secondAttribute="trailing" constant="-2" id="voA-K2-NQV"/>
             </constraints>
             <size key="customSize" width="338" height="232"/>
             <connections>
                 <outlet property="backCellView" destination="U3R-QI-ptu" id="Par-7T-fPl"/>
+                <outlet property="cellImageView" destination="muR-wU-Gx0" id="Wdv-lm-3NF"/>
             </connections>
             <point key="canvasLocation" x="353.62318840579712" y="184.82142857142856"/>
         </collectionViewCell>
