@@ -14,6 +14,7 @@ class CardsCollectionFlowLayout: UICollectionViewFlowLayout {
         
         scrollDirection = .horizontal
         itemSize = CGSize(width: collectionView.frame.width / 2.75, height: collectionView.frame.height / 2)
+        print(collectionView.frame.width)
         print(itemSize)
         let peekingItemWidth = itemSize.width / 2
         let horizontalInsets = (collectionView.frame.size.width - itemSize.width) / 2

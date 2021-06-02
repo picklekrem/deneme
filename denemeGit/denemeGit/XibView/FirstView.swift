@@ -13,6 +13,7 @@ class FirstView: UIView {
     
     override func awakeFromNib() {
         firstImage.layer.cornerRadius = 16
+        
     }
     
 }

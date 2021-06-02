@@ -11,6 +11,8 @@
 		B93405E1264E9E07007D6EFF /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93405DF264E9E07007D6EFF /* CollectionViewCell.xib */; };
 		B93405E3264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93405E2264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift */; };
 		B93405F8264EE053007D6EFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93405F7264EE053007D6EFF /* DetailViewController.swift */; };
+		B94A21F72667E35B00EE8C3C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94A21F62667E35B00EE8C3C /* AlertView.swift */; };
+		B94A21F92667E36400EE8C3C /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94A21F82667E36400EE8C3C /* AlertView.xib */; };
 		B9A0E822265FB81E00B10234 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A0E821265FB81E00B10234 /* FirstView.swift */; };
 		B9A0E824265FB82800B10234 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A0E823265FB82800B10234 /* FirstView.xib */; };
 		B9A0E826265FB84700B10234 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A0E825265FB84700B10234 /* SecondView.swift */; };
@@ -32,6 +34,8 @@
 		B93405DF264E9E07007D6EFF /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		B93405E2264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionFlowLayout.swift; sourceTree = "<group>"; };
 		B93405F7264EE053007D6EFF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B94A21F62667E35B00EE8C3C /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		B94A21F82667E36400EE8C3C /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		B9A0E821265FB81E00B10234 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		B9A0E823265FB82800B10234 /* FirstView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstView.xib; sourceTree = "<group>"; };
 		B9A0E825265FB84700B10234 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				B9A0E823265FB82800B10234 /* FirstView.xib */,
 				B9A0E825265FB84700B10234 /* SecondView.swift */,
 				B9A0E827265FB85200B10234 /* SecondView.xib */,
+				B94A21F62667E35B00EE8C3C /* AlertView.swift */,
+				B94A21F82667E36400EE8C3C /* AlertView.xib */,
 			);
 			path = XibView;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94A21F92667E36400EE8C3C /* AlertView.xib in Resources */,
 				B9A0E828265FB85200B10234 /* SecondView.xib in Resources */,
 				EA862DBB264B4B550000B846 /* LaunchScreen.storyboard in Resources */,
 				EA862DB8264B4B550000B846 /* Assets.xcassets in Resources */,
@@ -216,6 +223,7 @@
 				B93405E3264ED3B7007D6EFF /* CardsCollectionFlowLayout.swift in Sources */,
 				B9A0E826265FB84700B10234 /* SecondView.swift in Sources */,
 				B93405E0264E9E07007D6EFF /* CollectionViewCell.swift in Sources */,
+				B94A21F72667E35B00EE8C3C /* AlertView.swift in Sources */,
 				B9A0E82A265FBA1600B10234 /* XibView.swift in Sources */,
 				EA862DB1264B4B520000B846 /* SceneDelegate.swift in Sources */,
 				B9B179DF2659515B0038AE9B /* ExitButtonViewController.swift in Sources */,

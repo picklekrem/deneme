@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HTu-ei-VY2">
                                 <rect key="frame" x="44" y="0.0" width="808" height="393"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zSa-OE-2OJ">
                                     <size key="itemSize" width="237" height="178"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -58,7 +59,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jDX-Sg-2rL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="jDX-Sg-2rL" firstAttribute="trailing" secondItem="HTu-ei-VY2" secondAttribute="trailing" id="5I1-R5-Nt7"/>
                             <constraint firstItem="HTu-ei-VY2" firstAttribute="top" secondItem="jDX-Sg-2rL" secondAttribute="top" id="8W5-CV-4TQ"/>
@@ -184,16 +185,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40m-cv-5fb">
-                                <rect key="frame" x="60" y="0.0" width="776" height="393"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="backButton:" destination="kYS-Sm-B7o" eventType="touchUpInside" id="eEI-14-cQH"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="f7G-9b-1vD">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40m-cv-5fb">
+                                <rect key="frame" x="60" y="0.0" width="57" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="kYS-Sm-B7o" eventType="touchUpInside" id="8mp-hG-5Uk"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4d-SB-dJB" customClass="XibView" customModule="denemeGit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="AlertView"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G6c-t3-mb4"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -204,13 +217,19 @@
                             <constraint firstAttribute="bottom" secondItem="f7G-9b-1vD" secondAttribute="bottom" id="Jmv-PT-N8k"/>
                             <constraint firstAttribute="trailing" secondItem="f7G-9b-1vD" secondAttribute="trailing" id="NQW-Ta-14B"/>
                             <constraint firstItem="40m-cv-5fb" firstAttribute="top" secondItem="G6c-t3-mb4" secondAttribute="top" id="TIK-eE-F4L"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="40m-cv-5fb" secondAttribute="trailing" id="gl0-Zr-bnR"/>
+                            <constraint firstItem="n4d-SB-dJB" firstAttribute="top" secondItem="G6c-t3-mb4" secondAttribute="top" id="Tia-4X-2OV"/>
+                            <constraint firstItem="n4d-SB-dJB" firstAttribute="leading" secondItem="HHa-KY-9qq" secondAttribute="leading" id="bEc-e8-jll"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="40m-cv-5fb" secondAttribute="trailing" constant="719" id="gl0-Zr-bnR"/>
+                            <constraint firstAttribute="trailing" secondItem="n4d-SB-dJB" secondAttribute="trailing" id="jGR-BZ-4zq"/>
                             <constraint firstItem="f7G-9b-1vD" firstAttribute="top" secondItem="G6c-t3-mb4" secondAttribute="top" id="lyj-WT-B0Y"/>
-                            <constraint firstItem="G6c-t3-mb4" firstAttribute="bottom" secondItem="40m-cv-5fb" secondAttribute="bottom" id="xzG-nh-ugC"/>
+                            <constraint firstAttribute="bottom" secondItem="n4d-SB-dJB" secondAttribute="bottom" id="wTQ-Jp-gU2"/>
+                            <constraint firstItem="G6c-t3-mb4" firstAttribute="bottom" secondItem="40m-cv-5fb" secondAttribute="bottom" constant="333" id="xzG-nh-ugC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aJo-vV-WL9"/>
                     <connections>
+                        <outlet property="alertView" destination="n4d-SB-dJB" id="W7j-Mg-cfV"/>
+                        <outlet property="homeButton" destination="40m-cv-5fb" id="XT5-6L-nmQ"/>
                         <outlet property="imageView" destination="f7G-9b-1vD" id="KT1-ok-EbG"/>
                     </connections>
                 </viewController>
@@ -238,9 +257,13 @@
     </scenes>
     <resources>
         <image name="11111" width="1600" height="806"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="welcome" width="1920" height="1280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
