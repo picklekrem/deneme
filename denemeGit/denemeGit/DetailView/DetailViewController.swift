@@ -25,10 +25,8 @@ class DetailViewController: UIViewController, AlertViewDelegate {
         homeButton.transform = CGAffineTransform(translationX: 0, y: -200)
         timer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector:#selector(segueing),userInfo: nil, repeats: false)
         
-        
-        
         alertView.isHidden = true
-        
+        print("test")
     }
     
     func yesClicked() {
@@ -39,7 +37,6 @@ class DetailViewController: UIViewController, AlertViewDelegate {
         alertView.isHidden = true
     }
     
-    
     @objc func segueing() {
         UIView.animate(withDuration: 0.5) { [self] in
             homeButton.transform = CGAffineTransform(translationX: 0, y: 0)
@@ -49,12 +46,12 @@ class DetailViewController: UIViewController, AlertViewDelegate {
     
     @objc func didTapImageView(_ sender: UITapGestureRecognizer) {
         if touchButton {
-            UIView.animate(withDuration: 1) { [self] in
+            UIView.animate(withDuration: 0.5) { [self] in
                 homeButton.transform = CGAffineTransform(translationX: 0, y: 0)
                 touchButton = false
             }
         } else {
-            UIView.animate(withDuration: 1) { [self] in
+            UIView.animate(withDuration: 0.5) { [self] in
                 homeButton.transform = CGAffineTransform(translationX: 0, y: -200)
                 touchButton = true
             }
